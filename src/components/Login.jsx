@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 
 function Login() {
@@ -6,15 +5,6 @@ function Login() {
   const [loginId, setLoginId] = useState("");
   const [error, setError] = useState(false);
   const [user, setUser] = useState({});
-  const handleClick = async (e) => {
-    e.preventDefault();
-    try {
-      const { data } = await axios.get("https://jsonplaceholder.typicode.com/users/1");
-      setUser(data);
-    } catch {
-      setError(true);
-    }
-  }
 
   return (
     <div>
@@ -35,7 +25,7 @@ function Login() {
         name="password"
         value={password}
       />
-      <button disabled={!loginId && !password} onClick={handleClick} >Login</button>
+      <button disabled={!loginId && !password}>Login</button>
       <span style={{ visibility: error ? "visible" : "hidden" }}>
         Something went wrong!
       </span>

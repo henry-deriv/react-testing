@@ -1,6 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import Login from "./Login";
-import axios from "axios";
 
 describe('<Login />', () => { 
   test('Login ID input and label should be rendered', () => {

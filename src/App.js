@@ -1,7 +1,9 @@
+import Login from "./components/Login";
+
 function App() {
   return (
     <div className="App">
-      Learn React
+      <Login />
     </div>
   );
 }
